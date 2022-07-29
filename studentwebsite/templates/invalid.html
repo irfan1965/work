@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>HOME</title>
+   <style>
+       .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+       body{
+           background-color: #d8f436;
+       }
+       button{
+           font-size: 3rem;
+       }
+       a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+ul{
+    background-color: aquamarine;
+}
+body{
+    background-color: aqua ;
+}
+a:hover, a:active {
+  background-color: red;}
+   </style>
+</head>
+<body>
+    
+   
+         <br>
+    
+        <a class="active" href={% url 'home' %}>HOME</a>
+        <a class="active" href={% url 'xyz' %}>registration</a>
+        <!-- <a class="active" href={% url 'home' %}></a> -->
+
+        <div class="dropdown">
+  <button class="dropbtn">search</button>
+  <div class="dropdown-content">
+    <a href={% url 'find' %} >ID</a>
+    <a href={% url 'branch' %}>branch</a>
+  </div>
+</div>
+ 
+</body>
+</html>
+{% load static %}
+
+<body background="<img src="{% static 'goat.jpg' %}"alt="orifh" >"
+ 
+    <marquee><h1>Roll Number Not Found(* *)</h1></marquee>
+    <!-- <iframe src="/home/medplus/Desktop/assement-6/Student_Project/static/quote3.jpg" style="border:2px solid red;" height="700" width="1050" title="Iframe Example"></iframe> -->
+     <img src="{% static 'goat.jpg' %}"alt="orifh" >
+</body>

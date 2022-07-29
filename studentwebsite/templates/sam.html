@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .dropbtn {
+   background-color: #04AA6D;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown-content a:hover {background-color: #ddd;}
+ 
+ .dropdown:hover .dropdown-content {display: block;}
+ 
+ .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        body{
+            background-color: #d8f436;
+        }
+        button{
+            font-size: 3rem;
+        }
+        a:link, a:visited {
+   background-color: #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+ }
+ ul{
+     background-color: aquamarine;
+ }
+ body{
+     background-color: aqua ;
+ }
+ a:hover, a:active {
+   background-color: red;}
+    </style>
+    <title>sam</title>
+</head>
+<body>
+
+    <a class="active" href={% url 'home' %}>HOME</a>
+    <a class="active" href={% url 'xyz' %}>registration</a>
+    <!-- <a class="active" href={% url 'home' %}></a> -->
+    <a class="active" href={% url 's_f' %}>details</a>
+    <form action="{%url 'roll' %}" method="POST"> 
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ht.css">
+
+    <title>Document</title>
+</head>
+<body style="background-image: url('img_girl.jpg');">
+    <h1>Show</h1>
+{% if f %}     
+        <h1><marquee>Student_Marks</marquee></h1>
+            <table>
+                <tr>
+                <th>sem_id</th>
+                <th>roll_no</th>
+                <th>grade</th>
+                <th>pass_fail</th>
+                <th>credits</th>
+                <th>cgpa</th>
+                <th>total_marks</th>
+            </tr>
+            <tr>
+            {% for r in f %}
+            <td>{{r.sem_id}}</td>
+            <td>{{r.roll_no}}</td>
+            <td>{{r.grade}}</td>
+            <td>{{r.pass_fail}}</td>
+            <td>{{r.credits}}</td>
+            <td>{{r.cgpa}}</td>
+            <td>{{r.total_marks}}</td>
+        </tr>
+{% endfor %}
+    </table>
+{% else %}
+<h1> No Data</h1>
+{% endif %}
+</body>
+</html> -->

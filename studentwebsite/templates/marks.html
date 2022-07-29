@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>marks</title>
+    <script>
+        function alert1(){
+            alert(" Registration Sucessfull")
+        }
+    </script>
+    <style>
+        .dropbtn {
+   background-color: #04AA6D;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown-content a:hover {background-color: #ddd;}
+ 
+ .dropdown:hover .dropdown-content {display: block;}
+ 
+ .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        body{
+            background-color: #d8f436;
+        }
+        button{
+            font-size: 3rem;
+        }
+        a:link, a:visited {
+   background-color: #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+ }
+ 
+ ul{
+     background-color: aquamarine;
+     
+ }            
+ body{
+     background-color: aqua ;
+ }
+ a:hover, a:active {
+   background-color: red;}
+    </style>
+</head>
+<body>
+    <ul>
+    <a class="active" href={% url 'home' %}>HOME</a>
+        <a class="active" href={% url 'xyz' %}>registration</a>
+        <!-- <a class="active" href={% url 'home' %}></a> -->
+        <a class="active" href={% url 's_f' %}>details</a>
+    </ul>
+<div style="background-color: grey; height: 500 ; width: 600;">
+    <form action="{% url 'sucess' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <table>
+        <th>Sem_Id1</th>
+        <td><input type="text" name="Sem_Id1">
+            <br>
+            <th>roll_no</th>
+            <td><input type="text" name="roll_no">
+
+
+           
+        <tr>
+            
+            <!-- <td><input type="text" name="Sem_Id"> -->
+               
+            <!-- <td><input type="text" name="roll_no"> -->
+                <th> subjects name  </th>
+                <th>grade</th>
+                <!-- <td><input type="text" name="grade"> -->
+                    <th>pass_fail</th>
+                    <!-- <td><input type="text" name="pass_fail"></td> -->
+                    <th>credits</th>
+                        <!-- <td><input type="text" name="credits"> -->
+                            <th>marks</th>   
+                            <!-- <td><input type="text" name="cgpa"> -->
+            </tr>
+
+                 <tr>
+                    <td><input type="text" name="s1"></td>
+
+                  <td><input type="text" name="g1"></td>
+                    <td><input type="text" name="pf1" width="10" height="10"></td>
+                        <td><input type="text" name="c1"></td>
+                            <td><input type="text" name="m1"></td>
+                  </tr>
+       
+        <tr>
+            <th><input type="text" name="s2"></th>
+            <td><input type="text" name="g2">
+                <td><input type="text" name="pf2"></td>
+                <td><input type="text" name="c2">
+                    <td><input type="text" name="pf2"></td>
+            </tr>
+
+            <tr>
+                <th><input type="text" name="s3"></th>
+                <td><input type="text" name="g3"></td>
+                    <td><input type="text" name="pf3"></td>
+                        <td><input type="text" name="c3"></td>
+                            <td><input type="text" name="m3"></td>
+                </tr>
+                
+
+            </table>
+<!-- roll_no:<input type="text" name="roll_no"><br><br>
+grade  :<input type="text" name="grade"><br><br>
+pass_fail:<input type="text" name="pass_fail"><br><br>
+credits : <input type="text" name="credits"><br><br>
+cgpa :   <input type="text" name="cgpa"><br><br>
+subject1 : <input type="text" name="subject1:"><br><br>
+subject2 : <input type="text" name="subject2"><br><br>
+subject3 :  <input type="text" name="subject3"><br><br> -->
+<br><br>
+<table>
+<th>Sem_Id2</th>
+<td><input type="text" name="Sem_Id2">
+<tr>
+    
+    <!-- <td><input type="text" name="Sem_Id"> -->
+       
+    <!-- <td><input type="text" name="roll_no"> -->
+        <th>  subjects name  </th>
+        <th>grade</th>
+        <!-- <td><input type="text" name="grade"> -->
+            <th>pass_fail</th>
+            <!-- <td><input type="text" name="pass_fail"></td> -->
+            <th>credits</th>
+                <!-- <td><input type="text" name="credits"> -->
+                    <th>marks</th>   
+                    <!-- <td><input type="text" name="cgpa"> -->
+    </tr>
+         <tr>
+           <th><input type="text" name="s4"></th>
+          <td><input type="text" name="g4">
+            <td><input type="text" name="pf4" width="10" height="10">
+                <td><input type="text" name="c4">
+                    <td><input type="text" name="m4"></td>
+          </tr>
+
+<tr>
+    <th><input type="text" name="s5"></th>
+    <td><input type="text" name="g5">
+        <td><input type="text" name="pf5"></td>
+        <td><input type="text" name="c5">
+            <td><input type="text" name="m5"></td>
+    </tr>
+
+    <tr>
+        <th><input type="text" name="s6"></th>
+        <td><input type="text" name="g6">
+            <td><input type="text" name="pf6">
+                <td><input type="text" name="c6">
+                    <td><input type="text" name="m6"></td>
+        </tr>
+    </table>
+        <br><br>
+        <table>
+            <th>Sem_Id3</th>
+            <td><input type="text" name="Sem_Id3"></td>
+            <tr>
+                
+                <!-- <td><input type="text" name="Sem_Id"> -->
+                   
+                <!-- <td><input type="text" name="roll_no"> -->
+                    <th>  subjects names  </th>
+                    <th>grade</th>
+                    <!-- <td><input type="text" name="grade"> -->
+                        <th>pass_fail</th>
+                        <!-- <td><input type="text" name="pass_fail"></td> -->
+                        <th>credits</th>
+                            <!-- <td><input type="text" name="credits"> -->
+                                <th>marks</th>   
+                                <!-- <td><input type="text" name="cgpa"> -->
+                </tr>
+                     <tr>
+                       <th><input type="text" name="s7"></th>
+                      <td><input type="text" name="g7">
+                        <td><input type="text" name="pf7" width="10" height="10">
+                            <td><input type="text" name="c7">
+                                <td><input type="text" name="m7"></td>
+                      </tr>
+           
+            <tr>
+                <th><input type="text" name="s8"></th>
+                <td><input type="text" name="g8"></td>
+                    <td><input type="text" name="pf8"></td>
+                    <td><input type="text" name="c8"></td>
+                        <td><input type="text" name="m8"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" name="s9"></th>
+                    <td><input type="text" name="g9"></td>
+                        <td><input type="text" name="pf9"></td>
+                            <td><input type="text" name="c9"></td>
+                                <td><input type="text" name="m9"></td>
+                    </tr>
+</table>
+<input type="submit" onclick="alert1()" value="submit">
+</form>
+</div>
+</body>
+</html>

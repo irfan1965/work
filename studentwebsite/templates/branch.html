@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+        background-color: aqua ;
+    }
+   
+      table,td,th{
+        border: solid black 1px;
+        height: 3px;
+        width: 1px;
+
+      }
+        .dropbtn {
+   background-color: #04AA6D;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown-content a:hover {background-color: #ddd;}
+ 
+ .dropdown:hover .dropdown-content {display: block;}
+ 
+ .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        body{
+            background-color: #d8f436;
+        }
+        button{
+            font-size: 3rem;
+        }
+        a:link, a:visited {
+   background-color: #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+ }
+ ul{
+     background-color: aquamarine;
+ }
+ body{
+     background-color: aqua ;
+ }
+ a:hover, a:active {
+   background-color: red;}
+    </style>
+      
+    <title>branch</title>
+</head>
+<body>
+  <a class="active" href={% url 'home' %}>HOME</a>
+  <a class="active" href={% url 'xyz' %}>registration</a>
+  <!-- <a class="active" href={% url 'home' %}></a> -->
+  <a class="active" href={% url 's_f' %}>details</a>
+    <h1 >Student_Profile</h1>
+    {% if l == 0 %}
+    <h1>doen't exists</h1>
+    {% else %}
+            <table style="width:100%">
+              <tr>
+                <th>name </th>
+                <th>branch_name</th>
+                <th>duration</th>
+                <th>degree_type</th>
+                <th>roll_no</th>
+                <th>father_name</th>
+                <th>sex</th>
+                <th>Image</th>
+            </tr>
+            
+            <!-- <tr>
+            <td>{{r.name }}</td>
+            <td>{{r.branch_name}}</td>
+            <td>{{r.duration}}</td>
+            <td>{{r.degree_type}}</td>
+            <td>{{r.roll_no}}</td>
+            <td>{{r.father_name}}</td>
+            <td>{{r.sex}}</td>
+             <td>{{r.pic}}</td> 
+            <td><img src="{{r.img.url}}" alt="My image" height="150" width="200"></td> -->
+           
+
+
+          
+          </tr>
+          
+          <!-- <td>hi</td> -->
+            {% for k in cs%}
+            <tr>
+              
+            <td>{{k.name }}</td>
+            <td>{{k.branch_name}}</td>
+            <td>{{k.duration}}</td>
+            <td>{{k.degree_type}}</td>
+            <td>{{k.roll_no}}</td>
+            <td>{{k.father_name}}</td>
+            <td>{{k.sex}}</td>
+            <td><img src="{{ k.img.url }}" alt=""  height="150" width="200"></td>
+        </tr>
+  {% endfor %}
+      {% endif %} 
+    </table>
+       
+</body>
+</html>

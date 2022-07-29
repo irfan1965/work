@@ -1,0 +1,31 @@
+{% extends "test.html" %}
+
+   
+{% block content %}
+
+<h1><marquee>Student_Marks</marquee></h1>
+<table style="width:100%">
+    <tr>
+    <th>sem_id </th>
+    <th>roll_no</th>
+    <th>grade</th>
+    <th>pass_fail</th>
+    <th>credits</th>
+    <!-- <th>cgpa</th> -->
+    <th>total_marks</th>
+</tr>
+{% for j in g %}
+<tr>
+    
+        <td>{{j.sem_id  }}</td>
+        <td>{{j.roll_no}}</td>
+        <td>{{j.grade}}</td>
+        <td>{{j.pass_fail}}</td>
+        <td>{{j.credits}}</td>
+        <!-- <td>{{j.cgpa}}</td> -->
+        <td>{{j.total_marks}}</td>
+</tr>
+{% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script>
+    
+    function hi(k){
+        alert("Sending Request ...")
+    }
+</script>
+   <title>Doctor Request</title>
+
+</head>
+<body>
+    
+    <table class="table table-hover" border="1" width="100">
+        <tr>
+        <th>Doc_id</th>
+        <th>Doctor_Name</th>
+        <th>Doctor_Desgination</th>
+        <th>Doctor_Exp</th>
+        <th>Doctor_Loc</th>
+        <th>Doctor_Slot</th>
+        <th>Doctor_Pay</th>
+    </tr>
+    {% for i in Doc %}
+    <tr>
+        <td>{{i.Doctor_ID}}</td>
+        <td>{{i.Doctor_Name}}</td>
+        <td>{{i.Doctor_Desgination}}</td>
+        <td>{{i.Doctor_Exp}}</td>
+        <td>{{i.Doctor_Loc}}</td>
+        <td>{{i.Doctor_Slot}}</td>
+        <td>
+        <form action="{% url 'req' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" value="{{f}}" name="Farmer_Name">
+            <input type="hidden"  value="{{a}}" name="Doctor_Name">
+            <input type="hidden" id='qwert'  value="{{i.Doctor_Desgination}}" name="Doctor_Name1">
+
+            <input type="hidden" value=" {{ Am }}" name="Animal_Amount">
+            <input type="hidden"   value="{{i.Doctor_ID}}" name="Doctor_ID">
+          
+                <button type="submit" class="btn btn-outline-warning"  onclick="hi(document.getElementById('qwert').value)" value="AddAnimals">AnyPay</button>
+
+        </form>
+    </td>
+    </tr>
+    
+    {% endfor %}
+    </table>
+    {{f}}
+    {{a}}
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>s_f</title>
+    <style>
+       
+      table,td,th{
+        border: solid black 1px;
+        height: 3px;
+        width: 1px;
+      }
+       .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+       body{
+           background-color: #d8f436;
+       }
+       button{
+           font-size: 3rem;
+       }
+       a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+ul{
+    background-color: rgb(201, 198, 23);
+    height: 50px;
+}
+body{
+    background-color: aqua ;
+}
+a:hover, a:active {
+  background-color: red;}
+    </style>
+</head>
+<body ><form  method = "POST" action="{% url 'branch1' %}">
+    {% csrf_token %}
+  
+    
+    <input type="text" name="Roll_Number" required>
+    <!-- <a href={% url 's_f' %}>Roll_No</a> -->
+  
+
+   
+    
+    <!-- <a href={% url 's_f' %}>Roll_No</a> -->
+    <!-- <div class="dropdown"style=" float:right; background-color: red" >
+    <button class="dropbtn">Branches</button>
+    <div class="dropdown-content">
+        <a href={% url 'cse' %} name="cse" >cse</a>
+        <a href={% url 'info' %} name="info" >info</a>
+        <a href={% url 'eee' %} name="eee" >eee</a>
+        <a href={% url 'Pharmacy' %} name="Pharmacy" >Pharmacy</a>
+        <a href={% url 'mechanical' %} name="mechanical" >mechanical</a>
+       
+      </div>
+    </div> -->
+    <select name="branch1" id="">
+      <option value="none">none</option>
+    <option value="cse">cse</option>
+<option value="info">info</option>
+<option value="eee">eee</option>
+<option value="Pharmacy">pharmarcy</option>
+</select>
+<input type="submit" value="roll_no"> 
+</form>
+<br><br>
+<table>
+    <tr>
+    <th>Name</th>
+    <th>Branch</th>
+    <th>duration</th>
+    <th>degree_type</th>
+    <th>roll_no</th>
+    <th>father_name</th>
+    <th>sex</th>
+    <th>img</th>
+</tr>
+{% for j in s %} 
+<tr>
+    
+    <th>{{j.name}}</th>
+    <th>{{j.branch_name}}</th>
+
+    <th>{{j.duration}}</th>
+
+    <th>{{j.degree_type}}</th>
+    <th>{{j.roll_no}}</th>
+    <th>{{j.father_name}}</th>
+    <th>{{j.sex}}</th>
+    <th><img src="{{j.img.url}}" alt="My image" height="150" width="200"></th>
+
+</tr>
+{% endfor %} 
+
+</table>
+
+    
+
+</body>
+</html>
