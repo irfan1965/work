@@ -1,0 +1,25 @@
+<div class="inta" style="float:right ;">
+    <form (ngSubmit)="search($event)">
+        <input type="submit" class="bt btn-warning me-2"> : 
+    
+        <input name="player">
+     </form>
+</div>
+<table class =" table hover">
+    <tr>
+        <th> id</th>
+        <th>name</th>
+        <th>email</th>
+        <th> location </th>
+        <th> mobilenumber</th>
+    </tr>
+    <tr *ngFor="let data of details">
+        <td>{{data.id}}</td>
+        <td>{{data.first_name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.location}}</td>
+        <td>{{data.mobile_number}}</td>
+
+
+    </tr>
+</table>

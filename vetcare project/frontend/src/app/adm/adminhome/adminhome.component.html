@@ -1,0 +1,40 @@
+<!-- <div *ngIf="role()=='admin'"> -->
+
+<div class="irfan">
+    <div class="asdf">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  w-100 nav-justified  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " routerLink="home" >Home</a>
+          </li>
+          
+          <a class="nav-link " routerLink="doctor" routerLinkActive="active" role="button"  aria-expanded="false">
+            Doctor
+          </a>
+
+          <a class="nav-link " routerLink="payment" routerLinkActive="active" role="button"  aria-expanded="false">
+            Payments
+          </a>
+          <a class="nav-link " routerLink="user" routerLinkActive="active" role="button"  aria-expanded="false">
+            User
+          </a>
+
+          <a class="nav-link " routerLink="adminpie" routerLinkActive="active" role="button"  aria-expanded="false">
+            Statistics
+          </a>
+          
+          <a class="nav-link " routerLink="/"  (click)="clr()" routerLinkActive="active" role="button"  aria-expanded="false" >
+            Logout
+          </a>
+        </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+<router-outlet></router-outlet>

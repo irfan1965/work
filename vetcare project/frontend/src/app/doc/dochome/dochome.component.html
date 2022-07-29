@@ -1,0 +1,41 @@
+<div *ngIf = "role()=='doctor'">
+
+
+<div class="irfan">
+    <div class="asdf">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  w-100 nav-justified  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="homepage">Home</a>
+          </li>
+          <a class="nav-link " routerLink="request" routerLinkActive="active" role="button"  aria-expanded="false">
+            Request
+          </a>
+
+          <a class="nav-link " routerLink="doctorhistory" routerLinkActive="active" role="button"  aria-expanded="false">
+            History
+          </a>
+
+          <a class="nav-link " routerLink="Statistics" routerLinkActive="active" role="button"  aria-expanded="false">
+            Statistics
+          </a>
+     
+          <a class="nav-link " routerLink="/"  (click)="local()" routerLinkActive="active" role="button"  aria-expanded="false" >
+            Logout
+          </a>
+        </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+<div class="inta" style="float:right ;">
+    <form (ngSubmit)="search($event)">
+        <input type="submit" class="bt btn-warning me-2"> : 
+    
+        <input name="player">
+     </form>
+</div>
+
+<table class = 'table'>
+<tr>
+    <th>payment_id</th>
+    <th>cunstomer email</th>
+    <th>doctor_email</th>
+    <th>animal_id</th>
+    
+
+</tr>
+<tr *ngFor="let data of details">
+    <td>{{data.payment_id}}</td>
+    <td>{{data.customer_email}}</td>
+    <td>{{data.doctor_email}}</td>
+    <td>{{data.animal_id}}</td>
+</tr>
+
+</table>

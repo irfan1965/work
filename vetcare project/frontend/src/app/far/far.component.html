@@ -1,0 +1,89 @@
+
+<div *ngIf="method()== 5 else status">
+
+    <div class="form-horizontal ">
+        <form class="form-horizontal card  mx-auto  p-3 file-upload" [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+            <fieldset>
+            
+            <div class="ab">
+            
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label >Name : </label>
+                </div>
+                <div class="col-6" >
+                    <input class="form-control" formControlName="animal_name" type="text" placeholder="Enter Name" required>
+                </div>
+                </div>
+                
+                
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label>age :  </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control"  formControlName="animal_age" type="text" placeholder="" required>
+                </div>
+                </div>
+
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label>animal_symptom : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control" formControlName="animal_symptom" type="text" placeholder="" required>
+                </div>
+                </div>
+
+                
+
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label >amount : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control"  formControlName="animal_amount" type="text" placeholder="" required>
+                </div>
+                </div>
+
+                
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label >image : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control" #animal_image
+                        formControlName="animal_image" type="file" 
+                        (change)="onFileChangeEvent(animal_image.files)" placeholder="uploadyourimage" required="">
+                </div>
+                </div>
+                <div class="row mx-0 form-group pt-2">
+                <div class="col-6 ps-5" >
+                    <label >location : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control"  formControlName="animal_loc" type="text" placeholder="" required>
+                </div>
+                </div>
+
+                
+            <div>
+                <input type="hidden" formControlName="role">
+            </div>
+            <div class="form-group " >
+                <label class="col-md-4 control-label" for="save"></label>
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+            </div>
+        </div>
+            </fieldset>
+            </form>
+        </div>        
+    
+    
+</div>
+
+<ng-template #status>
+   
+</ng-template>

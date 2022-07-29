@@ -1,0 +1,10 @@
+.disp{
+  background-image: url('src/assets/admin1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  bottom : 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}

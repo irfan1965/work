@@ -1,0 +1,38 @@
+<div class="inta" style="float:right ;">
+    <form (ngSubmit)="search($event)">
+        <input type="submit" class="bt btn-warning me-2"> : 
+    
+        <input name="player">
+     </form>
+</div>
+<table class = 'table'>
+    <tr>
+        <th>name</th>
+        <th>photo</th>
+        <th>email</th>
+        <th>experience</th>
+        <th>designation</th>
+        <th>location</th>
+        <th>mobileNumber</th>
+        <th>role</th>
+        <th>timeslot</th>
+        <!-- <th>password</th> -->
+
+    </tr>
+    <tr *ngFor="let data of user ">
+        <td>{{data.first_name}}</td>
+        <td><img src="http://localhost:8100{{data.doctor_image}}" ></td>
+        <td>{{data.email}}</td>
+        <td>{{data.doctor_exp}}</td>
+        <td>{{data.doctor_designation}}</td>
+        <td>{{data.location}}</td>
+        <td>{{data.mobile_number}}</td>
+        <td>{{data.role}}</td>
+        <td>{{data.timeslot}}</td>
+        <!-- <td>{{data.password}}</td> -->
+
+
+
+
+    </tr>
+</table>

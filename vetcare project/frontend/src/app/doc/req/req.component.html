@@ -1,0 +1,173 @@
+<table class="table">
+  <tr>
+    <th>animal_id</th>
+    <th>Name</th>
+    <th>amount</th>
+    <th>age</th>
+    <th>symptom</th>
+    <th>location</th>
+    <th>owner email</th>
+    <th>image</th>
+    <th>prescription</th>
+    <th>sending request</th>
+  </tr>
+  <tr *ngFor="let  h of prescriptions;">
+
+    <td>{{ h.animal_id }}</td>
+    <td>{{ h.animal_name }}</td>
+    <td>{{ h.animal_amount }}</td>
+    <td>{{ h.animal_age }}</td>
+    <td>{{ h.animal_symptom }}</td>
+    <td>{{ h.animal_loc }}</td>
+    <td>{{ h.customer_email }} </td>
+    <td><img src='http://localhost:8100{{h.animal_image}}'></td>
+   <td><input  type="text" (input)='prescription($event)'></td>
+   <!--   <td>
+     
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>status</option>
+        <option value="1" formControlName="status"> completed</option>
+        <option value="2" formControlName="status">not completed</option>
+      </select>
+    </td> -->
+    
+
+  <td><button class="btn btn-warning" (click)="cur(h)">submit</button></td>
+
+  </tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="value()==1 else elseblock">
+  <form action="{% url 'displayd' %}" method="post">
+      <div class="container">
+         
+          <div id="login">
+              <h3 class="text-center text-white">Doctor Login</h3>
+              <div id="login-row" class="row justify-content-center align-items-center">
+                  <div id="login-column" class="col-md-6">
+                      <div id="login-box" class="col-md-12">
+                          <form id="login-form" class="form" action="" method="post">
+                              <h3 class="text-center text-info">Doctor Login</h3>
+                              <div class="form-group">
+                                  <label for="username" class="text-info mt-3">Username:</label><br>
+                                  <input type="text" name="Name" id="username" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="text-info mt-3">Password:</label><br>
+                                  <input type="password" name="psw" id="password" class="form-control">
+                              </div>
+                              <div class="form-group mx-auto" style="width: 100px;">
+                                  <input type="submit" name="login"  class="btn btn-info btn-md mt-3" value="login">
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+  </div>
+  <ng-template #elseblock>
+      <div class="form-horizontal ">
+      <form class="form-horizontal card  mx-auto  p-3" action="{% url 'db_Doctor'%}"  name="Doctor" method="POST">
+          <fieldset>
+  
+          
+            <legend>                    <b> Doctor Registration  </b>                </legend>
+          
+          
+          
+          
+          <div class="ab ">
+          <div class="form-group  " >
+            <label class="col-12 control-label" for="lname"> Name</label>  
+            <div class="col-12">
+            <input id="lname" name="Doctor_Name" type="text" placeholder="irfan" class="form-control input-md" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-12 control-label" for="fname">Desgination : </label>  
+              <div class="col-12">
+              <input id="fname" name="Desgination" type="text" placeholder="surgereon or physician" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label class="col-12 control-label" for="fname">location : </label>  
+              <div class="col-12">
+              <input id="fname" name="Doctor_Loc" type="text" placeholder="HighTech city" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-12 control-label" for="fname">Time Slot  </label>  
+              <div class="col-12">
+              <input id="fname" name="Doctor_Slot" type="text" placeholder="12:15" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+          
+          <div class="form-group">
+            <label class="col-12 control-label" for="fname">Experience  </label>  
+            <div class="col-12">
+            <input id="fname" name="Doctor_Exp" type="text" placeholder="5 years" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-12 control-label" for="email">Email</label>  
+            <div class="col-12">
+            <input id="email" name="email" type="text" placeholder="Medplus@example.com" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-12 control-label" for="email">Image</label>  
+              <div class="col-12">
+              <input id="email" name="email" type="file" placeholder="uploadyourimage" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+          
+          <div class="form-group">
+            <label class="col-12 control-label" for="password">Password</label>
+            <div class="col-12">
+              <input id="password" name="Doctor_Psw" type="password" placeholder="" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="save"></label>
+            <div class="col-md-8">
+              <button id="save" name="save" class="btn btn-success">Register</button>
+              <button id="clear" name="clear" class="btn btn-danger">Reset</button>
+            </div>
+          </div>
+      </div>
+          </fieldset>
+          </form>
+      </div>        
+  </ng-template> -->

@@ -1,0 +1,26 @@
+
+.qwerty{
+    /* background-color: rgb(7, 7, 6); */
+    background-image: url('src/assets/loginhome.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
+}
+.card{border: none;height: 320px; border-radius: 1%;
+ 
+    opacity: 1;
+   
+}
+
+.forms-inputs{position: relative}
+.forms-inputs span{position: absolute;top:-18px;left: 10px;background-color: #fff;padding: 5px 10px;font-size: 15px}.forms-inputs input{height: 50px;border: 2px solid #eee}.forms-inputs input:focus{box-shadow: none;outline: none;border: 2px solid #000}.btn{height: 50px}.success-data{display: flex;flex-direction: column}
+.bxs-badge-check{font-size: 90px}
+.reg{
+    height: 550px;
+    background-color: rgb(237, 226, 226);
+    overflow: auto;
+}
+.card{border:rgb(19, 199, 46);height: 320px;
+}

@@ -1,0 +1,258 @@
+
+
+<div class="qwerty">
+    <!-- *ngIf="auth()==1; then iftrue, else elseif -->
+
+
+<div *ngIf="auth()==1 else elseif">
+    <div class="container " >
+        <br>
+        <br>
+        <br>
+        <div class="row d-flex justify-content-center">
+            <form [formGroup]="Register" (ngSubmit)="login()">
+            <div class="col-md-6">
+                <div class="card px-5 py-5" id="form1">
+                    <div class="form-data" v-if="!submitted">
+                        <div class="forms-inputs mb-4"> <span> username</span> <input   formControlName="email" type="email" autocomplete="off"  v-model="email" v-bind:class="{'form-control':true, 'is-invalid' : !validEmail(email) && emailBlured}" v-on:blur="emailBlured = true">
+                            <!-- <div *ngIf="email."></div> -->
+                        
+                        </div>
+                        <div class="forms-inputs mb-4"> <span>Password</span> <input autocomplete="off" formControlName="password"  type="password" v-model="password" v-bind:class="{'form-control':true, 'is-invalid' : !validPassword(password) && passwordBlured}" v-on:blur="passwordBlured = true">
+                            <!-- <div class="invalid-feedback">Password must be 8 character!</div> -->
+                        </div>
+                        <div class="mb-3"> <button v-on:click.stop.prevent="submit" class="btn btn-dark w-100">Login</button> </div>
+                    </div>
+                    <div class="success-data" v-else>
+                        <!-- <div class="text-center d-flex flex-column"> <i class='bx bxs-badge-check'></i> <span class="text-center fs-1">You have been logged in <br> Successfully</span> </div> -->
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+        
+    </div>
+
+
+</div>
+<ng-template #elseif>
+    <br>
+    <br>
+    <br>
+
+<div class="reg card col-12 col-md-8 col-lg-6 mx-auto" style="height: 500px;">
+    <!-- <h1 style="margin-left: 80px; color: #ee9090;">Registration</h1> -->
+<div>
+    <div class="row mx-0">
+        <div class="col-md-6 pt-1" style="text-align: center; background-color: bisque;">
+            <a style="color:black; text-decoration: none;" routerLink="/doctorregisteration/2" routerLinkActive="active">
+                <h4>Doctor</h4>
+            </a> 
+        </div>
+        <div class="col-md-6 pt-1" style="text-align: center; background-color: aquamarine;">
+            <a style="color:black; text-decoration: none;" routerLink="/customerregistration/4" routerLinkActive="active">
+                <h4>Customer</h4>
+
+            </a>
+        </div>
+        <hr>
+    </div>
+    <div *ngIf="auth()==2">
+    <!-- doctor -->
+    <div class="form-horizontal  " style="height: 300px;">
+        <form class="form-horizontal card  mx-auto  p-3 file-upload" [formGroup]="Register" (ngSubmit) = "onSubmit()">
+            <fieldset>
+           
+            <div class="ab" >
+           
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label >Name : </label>
+                </div>
+                <div class="col-6" >
+                    <input class="form-control mt-1" formControlName="first_name" type="text" placeholder="Enter Name" required>
+                    <small *ngIf="Register.get('first_name')?.invalid && Register.get('first_name')?.touched " class="text-danger">name is required</small>
+                </div>
+              </div>
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5 " >
+                    <label >Desgination : </label> 
+                </div>
+                <div class="col-6 mt-1" >
+                    <input class="form-control mt-1"  formControlName="doctor_designation" type="text" placeholder="surgereon or physician" required>
+                    <small *ngIf="Register.get('doctor_designation')?.invalid &&  Register.get('doctor_designation')?.touched" class ='text-danger'> designation is required</small>
+                </div>
+              </div>
+              
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5 mt-1" >
+                    <label>location : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control mt-1"  formControlName="location" type="text" placeholder="Ex:Hi-Tech city" required>
+                    <small *ngIf="Register.get('location')?.invalid && Register.get('location')?.touched" class="text-danger" >location required</small>
+                </div>
+              </div>
+
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label>Time Slot : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control mt-1" formControlName="timeslot" type="text" placeholder="Ex: 12:15 pm" required>
+                    <small *ngIf="Register.get('timeslot')?.invalid && Register.get('timeslot')?.touched" class = "text-danger"> timeslot</small>
+                </div>
+              </div>
+
+
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5 " >
+                    <label >Experience : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control mt-1"  formControlName="doctor_exp" type="text" placeholder="Ex: 5 years" required>
+                    <small *ngIf="Register.get('timeslot')?.invalid && Register.get('timeslot')?.touched" class = "text-danger"> experience </small>
+
+
+                </div>
+              </div>
+              
+              
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5 mt-1" >
+                    <label >Email : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control"  formControlName="email" type="email" placeholder="Ex: Medplus@example.com " required>
+                    <small *ngIf="Register.get('email')?.invalid && Register.get('email')?.touched" class="text-danger">invalid</small>
+                </div>
+              </div>
+
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label >Mobile_Number : </label> 
+                </div>
+                <div class="col-6" >
+                   
+                    <input class="form-control"  formControlName="mobile_number" type="text" placeholder="Ex: 9121XXXX581" required>
+                    <small *ngIf="Register.get('mobile_number')?.invalid && Register.get('mobile_number')?.touched" class="text-danger" >invalid</small>
+                </div>
+              </div>
+
+              
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label >image : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control" #doctor_image
+                     formControlName="doctor_image" type="file" 
+                       (change)="onFileChangeEvent(doctor_image.files)" placeholder="uploadyourimage" required="">
+                </div>
+              </div>
+              <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label >password : </label> 
+                </div>
+                <div class="col-6" >
+                    <input class="form-control"   formControlName="password" type="password" placeholder="Ex: R@3qmcn" required>
+                    <small *ngIf="Register.get('password')?.invalid && Register.get('password')?.touched" class="text-danger" >invalid</small>
+
+                </div>
+              </div>
+
+             
+            <div class="row mx-0 form-group">
+                <div class="col-6 ps-5" >
+                    <label > confirm_password : </label>  </div>
+                <div class="col-6">
+                <input type="password" class="form-control" (input)="onKey($event)"  formControlName="confirm_password" placeholder="Confirm Password" required="required">
+                <small *ngIf="Register.get('password')?.value !=  Register.get('confirm_password')?.value " class="text-danger"> invalid</small>  
+                          
+            </div>
+              </div>
+            <div>
+                <input type="hidden" formControlName="role">
+            </div>
+            <div class="form-group " >
+              <label class="col-md-4 control-label" for="save"></label>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+        </div>
+            </fieldset>
+            </form>
+        </div>        
+    
+    </div>
+    <div *ngIf="auth()==4">
+        
+        <div style="background-color: rgb(232, 215, 215);">
+            <form [formGroup]="Register" (ngSubmit) = "onSubmit()">
+
+        <div class="signup-form  mx-auto zaq col-6  p-4">
+    
+          
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-12 mt-1">
+                            <input type="text" class="form-control" formControlName="first_name" placeholder="irfan" required="required">
+                            <small *ngIf="Register.get('first_name')?.invalid && Register.get('first_name')?.touched " class="text-danger">name is required</small>
+                        </div>
+                    </div>        	
+                </div>
+                <div class="form-group mt-1" >
+                <input type="text" class="form-control" formControlName="location" placeholder="Hi-Tech city" required="required">
+                <small *ngIf="Register.get('location')?.invalid && Register.get('location')?.touched" class="text-danger" >location required</small>
+
+
+                </div>
+                <div class="form-group mt-1">
+                    <input type="text" class="form-control"  formControlName="mobile_number" placeholder="9121XXXX581" required="required">
+                    <small *ngIf="Register.get('mobile_number')?.invalid && Register.get('mobile_number')?.touched" class="text-danger" >invalid</small>
+
+                </div>
+                
+                
+                <div class="form-group mt-1">
+                    <input type="email" class="form-control"  formControlName="email" placeholder="irfan@gmail.com" required="required">
+                    <small *ngIf="Register.get('email')?.invalid && Register.get('email')?.touched" class="text-danger">invalid</small>
+
+                    
+                </div>
+                <div class="form-group mt-1">
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password" required="required">
+                    <small *ngIf="Register.get('password')?.invalid && Register.get('password')?.touched" class="text-danger" >invalid</small>
+
+                </div>
+                <div class="form-group mt-1">
+                    <input type="password" class="form-control" formControlName="confirm_password" placeholder="Confirm Password" required="required">
+                <small *ngIf="Register.get('password')?.value !=  Register.get('confirm_password')?.value " class="text-danger"> invalid</small>  
+
+                </div>  
+                
+                <div>
+                    <input type="hidden" formControlName="role">
+                </div>
+              
+                <div class="form-group " >
+                    <label class="col-md-4 control-label" for="save"></label>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">submit</button>
+                    </div>
+                  </div>
+            
+    
+    
+        </div>
+    </form>
+    </div>
+    
+    </div>
+</div>
+</div>
+
+</ng-template>
+
+</div>

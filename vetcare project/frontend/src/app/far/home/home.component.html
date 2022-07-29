@@ -1,0 +1,38 @@
+<div *ngIf ="role()=='customer'">
+<div class="irfan">
+    <div class="asdf">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  w-100 nav-justified mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="homepage">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="book/5" routerLinkActive="active">BookAppoinment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"routerLink="history/3" routerLinkActive="active">Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"routerLink="statistics" routerLinkActive="active">statistics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/"  (click)="local()" routerLinkActive="active" >Logout</a>
+          </li>
+        
+        </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+
+<div class = 'image' >
+
+</div>
+<router-outlet></router-outlet>
+</div>

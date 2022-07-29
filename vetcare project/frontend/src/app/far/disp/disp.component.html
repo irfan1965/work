@@ -1,0 +1,36 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+<th>Name</th>
+<th>Designation</th>
+<th>Doctorimage </th>
+<th>Email</th>
+<th>Experience</th>
+<th>Location</th>
+<th>Timeslot</th>
+<th>Mobilenumber</th>
+<th>Anypay</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let v of u;">
+  
+  
+    <td> {{ v.first_name }}</td>
+    <td> {{ v.doctor_designation }}</td>
+    <td > <img src="http://localhost:8100{{v.doctor_image}}" ></td>
+
+    <td> {{ v.email }}</td>
+    <td> {{ v.doctor_exp }}</td>
+    <td> {{ v.location }}</td>
+    <td> {{ v.timeslot }}</td>
+
+    <td> {{ v.mobile_number }}</td>
+    <!-- <td ><button class="btn btn-primary mt-5"><a routerLink="doctreq/{{v.email}}" routerLinkActive="active">pay</a></button></td> -->
+
+<td><button  type="button" class='btn btn-warning' (click)="docreq(v.email)">pay</button></td>
+      </tr>
+      
+
+  </table>
+  
