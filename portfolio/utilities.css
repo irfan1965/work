@@ -1,0 +1,24 @@
+.flex{
+    display : flex; 
+}
+.items-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    outline: none;
+    box-shadow: none;
+    background-color: aqua;
+
+}
+.btn-primary:hover{
+    color: var(--primary) ;
+    box-shadow: none!important;
+    background-color: aqua;
+}
+.irfan{
+    height: 500px;
+    width: 350px;
+}
