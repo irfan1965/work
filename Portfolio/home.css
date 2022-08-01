@@ -16,8 +16,11 @@
 
 header{
     background-color: var(--dark);
-    height: 800px;
     text-decoration: none;
+   
+    height: 100vh;
+
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 80%, 0 100% );
 
 }
 *{
@@ -28,6 +31,7 @@ header{
 
 
 }
+
 
 .container{
     max-width: 1152px;
@@ -57,7 +61,7 @@ header nav .right{
 }
 header nav .left a:hover{
     color: var(--primary) ;
-    background-color: aqua;
+    color: aqua;
 
    
 }
@@ -71,4 +75,12 @@ header nav .left a:hover{
 
 .hero{
     display: inline;
+}
+.header{
+    background-color: var(--dark);
+    text-decoration: none;
+    height: 1000vh;
+
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 80%, 0 100% );
+
 }

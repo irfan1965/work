@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    
+        <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 20px;
+            }
+            
+            #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: red;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+            
+            #myBtn:hover {
+              background-color: #555;
+            }
+            a{
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+            </style>
+</head>
+<body>
+    
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+
+<div class=header>
+    <div class="container" >    <nav class="flex items-center justify-between">
+            <div class="left flex items-center">
+    <div class="logo" style="margin-top: 40px; margin-bottom: 20px; margin-left: 10px;">
+        <img src="/images/logo.svg" alt="">
+    </div>
+    <div style="margin-top: 30px;">
+        <a href="homepage.html">Home</a>
+        <a href="about.html" target="_parent" style="margin-left: 4px;">About</a>
+        <a href="projects.html" style="margin-left: 4px;">Projects</a>
+        <a href="resume.html" style="margin-left: 4px;">Resume</a>
+    
+    
+    
+    
+    
+    </div>
+            </div>
+            <div class="right" >
+                <button class="btn btn-primary">Contact</button>
+            </div>
+    
+        </nav>
+     
+    </div>
+    <div class="container">
+     
+     <div class="projects">
+     <h2 style="color: white;"> Project's : -</h2>
+     <ul style="list-style-type:circle ; color :aqua" >
+<li><a href="#vetcare">Vetcare Management Using Angular</a></li>
+<li><a href="#parking">Random Parking System Using Python</a></li>
+<li><a href="#meeting">Meeting Arangement Based On In-Out Timing Using Python</a></li>
+    </ul  >
+    <a name="vetcare"></a>
+    <ul style="list-style-type: circle; color :blueviolet">
+   <li> <h3>Description</h3></li>
+    Vetcare Mangement System  is a web application that helps the animals with
+    a health problem or physically injured, giving a medical care to the pets,our project
+    saves effort and time . 
+    <li> <h3>Technology Used</h3>
+<ol>
+    <li style="margin-left:20px ;">Angular</li>
+    <li style="margin-left:20px ;">Django</li>
+    <li style="margin-left:20px ;">RestApi</li>
+    <li style="margin-left:20px ;">JwtAuthentication</li>
+    <li style="margin-left:20px ;">Mysql</li>
+</ol>
+    </li>
+
+</ul>
+<h2 style="color: blue;">User Interface</h2>
+<div class="row">
+    <div class="col-md-4">
+         <h6 style="color: red;">homepage</h4>
+        <img style="height: 200px; border: 1px solid rgb(225, 11, 11);" src="img/projecthomepage.png" alt="">
+    </div>
+    
+    <div class="col-md-4">
+                  <h6 style="color: rgb(234, 14, 14);">loginpage</h4>
+
+        <img  style="height: 200px; border: 1px solid rgb(4, 0, 255);" src="img/login.png" alt="">
+    </div>
+    
+    <div class="col-md-4">
+                  <h6 style="color: rgb(32, 158, 175);">adminhomepage</h4>
+
+        <img style="height: 200px;  border: 1px solid rgb(0, 255, 26);"  src="img/adminhomepage.png" alt="">
+
+    </div>
+
+    <div class="col-md-4">
+                  <h6 style="color: rgb(99, 233, 17);">admindoctorpage</h4>
+
+        <img style="height: 200px;border: 1px solid rgb(206, 42, 5);" src="img/doctoradmin.png" alt="">
+
+    </div>
+    
+    <div class="col-md-4">
+                  <h6 style="color: rgb(230, 130, 8);">adminuserpage</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(153, 16, 84);" src="img/admin userpage.png" alt="">
+    </div>
+
+    <div class="col-md-4">
+                  <h6 style="color: rgb(222, 208, 9);">adminpayments</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(32, 168, 171);" src="img/adminpaymentpage.png" alt="">
+    </div>
+
+    <div class="col-md-4">
+                  <h6 style="color: rgb(20, 245, 54);">adminstatistic</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(4, 0, 255);" src="img/adminstatisticpage.png" alt="">
+
+    </div>
+    
+    <div class="col-md-4">
+                  <h6 style="color: rgb(209, 20, 219);">customerhomepage</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(169, 190, 36);" src="img/customerhomepage.png" alt="">
+
+    </div>
+
+    <div class="col-md-4">
+                  <h6 style="color: rgb(204, 221, 221);">customerhomepage</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(5, 167, 231);" src="img/cutomerstatistics.png" alt="">
+
+    </div>
+
+
+    <div class="col-md-4">
+                  <h6 style="color: rgb(201, 29, 196);">customerstatistics</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(234, 234, 241);" src="img/customerstatus.png" alt="">
+
+    </div><div class="col-md-4">
+                  <h6 style="color: rgb(131, 17, 212);">CustomerAnimalRegistration</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(171, 7, 12);" src="img/animalregisterationpage.png" alt="">
+
+    </div><div class="col-md-4">
+                  <h6 style="color: rgb(12, 195, 232);">doctorhomepage</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(245, 201, 6);" src="img/doctorhomepage.png" alt="">
+
+    </div><div class="col-md-4">
+                  <h6 style="color: rgb(240, 243, 175);">doctorreceiverequest</h4>
+
+        <img style="height: 200px; border: 1px solid rgb(72, 167, 193);" src="img/doctorreceiverequest.png" alt="">
+
+    </div>
+
+    <div class="col-md-4">
+     <h6 style="color: rgb(151, 32, 54);">doctorhistory</h4>
+    <img style="height: 200px; border: 1px solid rgb(86, 237, 27);" src="img/doctorhistory.png" alt="">
+
+    </div>
+    <div class="col-md-4">
+        <h6 style="color: rgb(84, 188, 78);">doctorstatistics</h4>
+
+<img style="height: 200px; border: 1px solid rgb(86, 237, 27);" src="img/doctorstatistics.png" alt="">
+
+</div>
+     
+</div>
+<div class="feature card" style="margin-top: 10px; background-color: aqua;">
+    <h2>features</h2>
+    <ul>
+        <li>JwtAuthentication</li>
+        <li>Tokenacess</li>
+        <li>for every 2 minutes token expries and generate new Tokenacess</li>
+        <li style="list-style-type:circle ;">example</li>
+        <li>accesstoken: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTE4NTMzLCJpYXQiOjE2NTg5MTgzNzIsImp0aSI6IjBhMDkxMGE
+            1NWRiYTQwNGM5YzRlOTIxZDMwODAwMzU1IiwidXNlcl9pZCI6NDUsImVtYWlsIjoiMTIzQGdtYWlsLmNvbSJ9.JN2x6tD1SuLv320UpkjhsDmPByeA-vgOByj6FxcWLjk"
+        </li>
+        <li>refreshtoken: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTAwNDgxMywiaWF0IjoxNjU4OTE4ND
+            EzLCJqdGkiOiJkMDcyMjJmN2ZhMDQ0OTY3YjdlNDRiN2EzMWNmNzk1MiIsInVzZXJfaWQiOjQ1LCJlbWFpbCI6IjEyM0BnbWFpbC5jb20ifQ.x2exkfQ-ynALYwyisI
+            T4AxL3D7MCtqGcZ5wOAltp_bQ"
+        </li>
+    </ul>
+    <li>Angular which provide singlepage application</li>
+</div>
+        
+
+</div>
+<a name="parking">
+    <h2 style="color:rgb(73, 225, 22) ;">parking</h2>
+    
+</a>
+<div style="color :beige">
+    In this random parking slot  all the vehicles are randomly allocate the slot of type bus,car,bike.
+    based on how much of hours parking a bill is issued on hourly based
+</div>
+<div class="row">
+
+                <div  class="col-md-6"  style="margin-bottom: 10px;">
+                    <h5 style="color:rgb(73, 225, 22) ;">randomly parking</h5>
+                    <img src="img/parkingslot.png" alt=""  style="height: 550px; width: 550px;" >
+                </div>
+
+
+                <div  class="col-md-6 mb-4px"  style="margin-bottom: 10px;">
+                    <h5 style="color:rgb(73, 225, 22) ;">billgenerating</h5>
+
+                    <img src="img/billgenerate.png" alt="" style="height: 550px; width: 550px;">
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <h5 style="color:rgb(73, 225, 22) ;">reset</h5>
+
+                    <img src="img/reset.png" alt="" style="height: 550px; width: 550px; margin-left: 50px;" >
+                </div>
+
+
+</div>
+<div>
+    <h3 style="color:rgb(73, 225, 22) ;">Technology Used</h3>
+    <ul style="color:rgb(201, 22, 225) ;">
+        <li>python</li>
+        <li>pandas</li>
+        <li>random module</li>
+    </ul>
+</div>
+
+
+
+<a name="meeting">
+
+
+<div>
+    <h3 style="color:rgb(196, 2, 2) ;">Meeting arrangements accordingly in-out timings using python</h3>
+    <li style="color:rgb(164, 2, 196) ;">Among the employees based on common timings meeting will
+        arranged</li>
+
+
+
+        <div class="row">
+    
+            <div class="col-md-6">
+                <h5 style="color:rgb(73, 225, 22) ; ">Rawdata</h5>
+                <img src="img/meetingrawdata.png" alt=""  style="height: 550px; width: 550px; ">
+            </div>
+
+
+            <div class="col-md-6" >
+                <h5 style="color:rgb(73, 225, 22) ;">arranging meeting between a0 and a1 employees id in minutes </h5>
+                <img src="img/arranginmeeting.png" alt=""  style="height: 550px; width: 550px;">
+            </div>
+    
+    
+    
+            <div class="col-md-6" >
+                <h5 style="color:rgb(73, 225, 22) ;">Updating Meeting Data </h5>
+                <img src="img/updatingmeeting.png" alt=""  style="height: 550px; width: 550px; margin-left: 50px;">
+            </div>
+
+
+
+        </div>
+
+
+
+        
+
+       <div>
+        <h3 style="color: rgb(173, 103, 173);">Technology Used</h3>
+        <ul style="color: violet;">
+            <li>python</li>
+            <li>pandas</li>
+        </ul>
+       </div> 
+
+    </div>
+</a>
+    
+</div>
+        
+             </div>
+            </div>
+
+
+</div>
+    </header>  
+
+
+</div>
+</body>
+</html>

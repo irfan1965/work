@@ -19,6 +19,18 @@
     background-color: aqua;
 }
 .irfan{
-    height: 500px;
-    width: 350px;
+    height: 400px;
+    width: 300px;
+    margin-left: 80px;
+}
+.container .social{
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 100px;
+    margin-right: 20px;
+
+
 }
